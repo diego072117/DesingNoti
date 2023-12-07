@@ -1,0 +1,73 @@
+@import "variables";
+
+.container-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2em;
+
+  .options-nav {
+    .option {
+      font-family: "Inter", sans-serif;
+      text-decoration: none;
+      color: $dark-grayish-blue;
+      margin: 0 1em;
+
+      &:hover {
+        color: $soft-red;
+        transition: 0.5s;
+      }
+    }
+  }
+}
+
+.menu-close,.menu-open{
+  display: none;
+}
+
+@media (max-width: 530px) {
+  .optios-overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: transform 0.6s ease;
+
+    .container-options {
+      background-color: $off-white;
+      width: 70%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      .menu-close {
+        display: flex;
+        justify-content: flex-end;
+        margin: 1em;
+        margin-bottom: 7em;
+      }
+      .option {
+        font-size: 20px;
+        font-weight: 600;
+        color: $very-dark-blue;
+        margin: 1em;
+      }
+    }
+  }
+  .close {
+    // display: none;
+    transform: translateY(-100em);
+  }
+
+  .open {
+    transform: translateXY(0);
+  }
+
+  .menu-close,.menu-open{
+    display: flex;
+  }
+}

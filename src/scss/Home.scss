@@ -1,0 +1,132 @@
+@import "variables";
+
+.heareder-home {
+  font-family: "Inter", sans-serif;
+  display: grid;
+  grid-template-areas: "content content aside";
+  grid-template-columns: 2.3fr 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 12px;
+  margin-bottom: 3em;
+
+  .grid-item {
+  }
+  .content {
+    .info-content {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin: 1em 0 0;
+      .title-info {
+        h1 {
+          font-size: 3em;
+        }
+      }
+      .noti-info {
+        color: $dark-grayish-blue;
+        margin: 0 1em;
+
+        p {
+          font-size: 16px;
+          margin-bottom: 4em;
+        }
+
+        .button-info-home {
+          border: none;
+          background-color: $soft-red;
+          color: $off-white;
+          padding: 14px 2.5em;
+          letter-spacing: 5px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $very-dark-blue;
+            transition: 0.8s;
+          }
+        }
+        @media (max-width: 570px) {
+          margin: 0;
+          p {
+            letter-spacing: 2px;
+            margin-bottom: 2em;
+          }
+        }
+      }
+    }
+    .container-image-home {
+      width: 100%;
+      height: 15em;
+
+      .img-descktop {
+        width: 100%;
+        height: 100%;
+        filter: saturate(1.3);
+        // object-fit: cover;
+        // object-position: center;
+      }
+      .img-mobile {
+        width: 100%;
+        height: 100%;
+        display: none;
+        @media (max-width: 570px) {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  .aside {
+    background-color: $very-dark-blue;
+    padding: 1em;
+    h1 {
+      font-size: 2em;
+      color: $soft-orange;
+      margin-bottom: 1em;
+    }
+    .content-aside {
+      color: $off-white;
+      .info-aside {
+        h3 {
+          margin: 1em 0 10px;
+          cursor: pointer;
+          &:hover {
+            color: $soft-orange;
+            transition: 0.8s;
+          }
+        }
+        p {
+          font-size: 14px;
+          color: $dark-grayish-blue;
+          margin-bottom: 1.5em;
+        }
+      }
+      .border {
+        border-bottom: 1px solid $dark-grayish-blue;
+      }
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  .heareder-home {
+    grid-template-areas: "content" "aside";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .aside {
+    margin-top: 1em;
+  }
+
+  .info-content {
+    flex-direction: column;
+
+    .title-info {
+      margin-bottom: 1em;
+    }
+  }
+
+  .img-descktop {
+    display: none;
+  }
+}

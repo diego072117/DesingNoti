@@ -12,6 +12,11 @@ Este es un proyecto simple de React que incluye un menú desplegable con transic
 
 Una vez que hayas completado los pasos anteriores, puedes ejecutar el proyecto utilizando el siguiente comando: npm run dev
 
+## Tecnologías Utilizadas
+
+- React
+- Bibliotecas
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
